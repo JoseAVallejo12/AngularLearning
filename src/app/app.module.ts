@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SaludoComponent } from './saludo/saludo.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { CronometroComponent } from './cronometro/cronometro.component';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SaludoComponent,
-    EventosComponent
+    EventosComponent,
+    CronometroComponent,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule,
