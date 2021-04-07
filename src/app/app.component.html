@@ -1,8 +1,14 @@
-<app-eventos></app-eventos>
+<app-eventos [valor1]="1" [valor2]="3"></app-eventos>
 <hr style="margin: 20px 0 20px 0;" />
 <hr style="margin: 20px 0 20px 0;" />
-
-<app-cronometro></app-cronometro>
+<div style="display:flex; justify-content: space-a; ">
+  <app-cronometro [id]="1" (stateCronometro)="onChangeCronometro($event)"></app-cronometro>
+  <app-cronometro [id]="2" (stateCronometro)="onChangeCronometro($event)"></app-cronometro>
+  <app-cronometro [id]="3" (stateCronometro)="onChangeCronometro($event)"></app-cronometro>
+  <app-cronometro [id]="4" (stateCronometro)="onChangeCronometro($event)"></app-cronometro>
+  <app-cronometro [id]="5" (stateCronometro)="onChangeCronometro($event)"></app-cronometro>
+  <app-cronometro [id]="6" (stateCronometro)="onChangeCronometro($event)"></app-cronometro>
+</div>
 <hr style="margin: 20px 0 20px 0;" />
 <hr style="margin: 20px 0 20px 0;" />
 

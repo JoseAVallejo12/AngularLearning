@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-eventos',
@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eventos.component.scss']
 })
 export class EventosComponent implements OnInit {
-  valor1: number;
-  valor2: number;
+  @Input() valor1: number;
+  @Input() valor2: number;
   result: number;
 
   constructor() {
-    this.valor1 = 7;
-    this.valor2 = 81;
+    this.valor1 = 0;
+    this.valor2 = 0;
     this.result = 0;
    }
 
