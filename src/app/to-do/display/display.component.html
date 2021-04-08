@@ -1,1 +1,4 @@
-<p>display works!</p>
+<div class="display">
+  <app-form (onSubmitData)="receiveData($event)"></app-form>
+  <app-list [tasks]="listTask"></app-list>
+</div>

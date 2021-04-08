@@ -1,1 +1,6 @@
-<p>form works!</p>
+<div class="boxForm">
+  <h2>Ingresa informacion</h2>
+  <input type="text" [(ngModel)]="task.title">
+  <input type="text" [(ngModel)]="task.description">
+  <button (click)="onClick()">Enviar</button>
+</div>

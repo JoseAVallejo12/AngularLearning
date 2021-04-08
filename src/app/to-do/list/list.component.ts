@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Task from '../models/task.model';
+
 
 @Component({
   selector: 'app-list',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  @Input('tasks') listTask: Array<Task>;
+
+  constructor() {
+    this.listTask = []
+  }
 
   ngOnInit(): void {
   }
