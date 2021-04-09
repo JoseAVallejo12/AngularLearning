@@ -17,16 +17,12 @@ export class DisplayComponent implements OnInit {
   }
 
   receiveData(event: Task) {
-    console.log(this.listTask);
-    console.log(event)
     this.listTask.push(event)
+    console.log(this.listTask)
   }
 
-  updateList(task: Task) {
-    console.log(task)
-  }
 
-  deleteRow(key: string) {
+  onClickDelTask(key: string) {
     this.listTask = this.listTask.filter((elemnt) => elemnt.id != key)
   }
 }

@@ -9,6 +9,7 @@ import { faEdit, faEraser, faSave } from '@fortawesome/free-solid-svg-icons'
 })
 export class ListComponent implements OnInit {
   @Input() task: Task;
+  @Output() taskToDelete: EventEmitter<string>;
   iconEdit = faEdit;
   iconDelete = faEraser;
   iconSave = faSave;
@@ -17,11 +18,13 @@ export class ListComponent implements OnInit {
   labelButtonEditSave: string;
 
 
+
   constructor() {
     this.task = new Task();
     this.editTask = false;
     this.classnameOne = 'is-outlined'
     this.labelButtonEditSave = 'Edit'
+    this.taskToDelete = new EventEmitter();
   }
 
   ngOnInit(): void {}
@@ -36,6 +39,10 @@ export class ListComponent implements OnInit {
       this.classnameOne = ''
       this.labelButtonEditSave = 'Save';
     }
+  }
+
+  onClickDelete(){
+    this.taskToDelete.emit(this.task.id);
   }
 
 }

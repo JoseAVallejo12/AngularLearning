@@ -17,7 +17,7 @@
         <fa-icon [icon]="iconSave" *ngIf="editTask"></fa-icon>
       </span>
     </button>
-    <button class="button is-danger is-outlined">
+    <button class="button is-danger is-outlined" (click)="onClickDelete()">
       <span>Delete</span>
       <span class="icon is-small">
         <fa-icon [icon]="iconDelete"></fa-icon>

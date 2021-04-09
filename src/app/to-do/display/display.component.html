@@ -4,7 +4,7 @@
   </div>
   <div class="columns is-centered is-multiline">
     <div class="column is-mobile" *ngFor="let item of listTask">
-      <app-list [task]="item"></app-list>
+      <app-list [task]="item" (taskToDelete)="onClickDelTask($event)"></app-list>
     </div>
   </div>
 </div>
