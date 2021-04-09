@@ -11,6 +11,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { DisplayComponent } from './to-do/display/display.component';
 import { ListComponent } from './to-do/list/list.component';
 import { FormComponent } from './to-do/form/form.component';
+import { EditTaskComponent } from './to-do/edit-task/edit-task.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { FormComponent } from './to-do/form/form.component';
     DisplayComponent,
     ListComponent,
     FormComponent,
+    EditTaskComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

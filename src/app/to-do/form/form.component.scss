@@ -1,11 +1,6 @@
+@charset "utf-8";
+@import '../../../../node_modules/bulma/bulma.sass';
+
 .boxForm {
-  text-align: center;
-  width: 400px;
-  height: 400px;
-  background: blue;
-  input {
-    width: 90%;
-    height: 30px;
-    margin: 10px;
-  }
+  min-height: 250px;
 }

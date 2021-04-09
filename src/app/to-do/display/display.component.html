@@ -1,4 +1,10 @@
-<div class="display">
-  <app-form (onSubmitData)="receiveData($event)"></app-form>
-  <app-list [tasks]="listTask"></app-list>
+<div class="columns is-centered">
+  <div class="column is-12-mobile is-6-tablet is-4-desktop">
+    <app-form (onSubmitData)="receiveData($event)"></app-form>
+  </div>
+  <div class="columns is-centered is-multiline">
+    <div class="column is-12-mobile is-6-tablet is-4-desktop" *ngFor="let item of listTask">
+      <app-list [task]="item"></app-list>
+    </div>
+  </div>
 </div>

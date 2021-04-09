@@ -21,4 +21,12 @@ export class DisplayComponent implements OnInit {
     console.log(event)
     this.listTask.push(event)
   }
+
+  updateList(task: Task) {
+    console.log(task)
+  }
+
+  deleteRow(key: string) {
+    this.listTask = this.listTask.filter((elemnt) => elemnt.id != key)
+  }
 }

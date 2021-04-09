@@ -1,6 +1,21 @@
-<div class="boxForm">
-  <h2>Ingresa informacion</h2>
-  <input type="text" [(ngModel)]="task.title">
-  <input type="text" [(ngModel)]="task.description">
-  <button (click)="onClick()">Enviar</button>
+<div class="box boxForm">
+  <div class="field">
+    <label class="label">Title</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="e.g. title task" [(ngModel)]="task.title">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Description</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="type description task" [(ngModel)]="task.description">
+    </div>
+  </div>
+  <button class="button is-success" (click)="onClick()">
+    <span class="icon is-small">
+      <fa-icon [icon]="iconSave"></fa-icon>
+    </span>
+    <span>Save</span>
+  </button>
 </div>

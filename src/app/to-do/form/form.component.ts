@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Task from '../models/task.model';
+import { faSave } from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-form',
@@ -8,6 +10,7 @@ import Task from '../models/task.model';
 })
 export class FormComponent implements OnInit {
   task: Task;
+  iconSave = faSave;
 
   @Output() onSubmitData: EventEmitter<Task>;
   constructor() {
