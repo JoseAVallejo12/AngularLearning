@@ -1,16 +1,28 @@
-<div class="card">
-  <div class="card-content">
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+<div class="box">
+  <div class="box__content">
+    <h3 class="title" *ngIf="!editTask">{{task.title}}</h3>
+    <div class="container" *ngIf="editTask">
+      <input class="input" type="text" [(ngModel)]="task.title">
+    </div>
+    <p *ngIf="!editTask">{{task.description}}</p>
+    <div class="container" *ngIf="editTask">
+      <textarea class="textarea is-small" [(ngModel)]="task.description"></textarea>
     </div>
   </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item">Save</a>
-    <a href="#" class="card-footer-item">Edit</a>
-    <a href="#" class="card-footer-item">Delete</a>
-  </footer>
+  <div class="box__footer">
+    <button class="button is-success" [ngClass]="classnameOne" (click)="onClickEdit()">
+      <span>{{labelButtonEditSave}}</span>
+      <span class="icon is-small">
+        <fa-icon [icon]="iconEdit" *ngIf="!editTask"></fa-icon>
+        <fa-icon [icon]="iconSave" *ngIf="editTask"></fa-icon>
+      </span>
+    </button>
+    <button class="button is-danger is-outlined">
+      <span>Delete</span>
+      <span class="icon is-small">
+        <fa-icon [icon]="iconDelete"></fa-icon>
+      </span>
+    </button>
+  </div>
 </div>
 
