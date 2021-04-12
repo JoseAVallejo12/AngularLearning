@@ -1,24 +1,20 @@
-<div class="calculadora">
+<div class="calculadora box">
   <div class="display">
     <h1>{{ display }}</h1>
   </div>
   <div class="teclado">
-    <button (click)="onClick($event)" name="1" class="tecla">1</button>
-    <button (click)="onClick($event)" name="2" class="tecla">2</button>
-    <button (click)="onClick($event)" name="3" class="tecla">3</button>
-    <button (click)="onClick($event)" name="4" class="tecla">4</button>
-    <button (click)="onClick($event)" name="5" class="tecla">5</button>
-    <button (click)="onClick($event)" name="6" class="tecla">6</button>
-    <button (click)="onClick($event)" name="7" class="tecla">7</button>
-    <button (click)="onClick($event)" name="8" class="tecla">8</button>
-    <button (click)="onClick($event)" name="9" class="tecla">9</button>
-    <button (click)="onClick($event)" name="0" class="tecla0">0</button>
-    <button (click)="onClick($event)" name="+" class="teclaOp">+</button>
-    <button (click)="onClick($event)" name="-" class="teclaOp">-</button>
-    <button (click)="onClick($event)" name="*" class="teclaOp">*</button>
-    <button (click)="onClick($event)" name="/" class="teclaOp">/</button>
-    <button (click)="onClick($event)" name="ce" class="teclaF">CE</button>
-    <button (click)="onClick($event)" name="=" class="teclaF">=</button>
-
+    <button
+      *ngFor="let i of listButtons"
+      (click)="onClick($event)"
+      name="{{ i }}"
+      [ngClass]="{
+        tecla: numberMath(i),
+        tecla0: i.includes('0'),
+        teclaOp: operationMath(i),
+        teclaF: operatorMath(i)
+      }"
+    >
+      {{ i }}
+    </button>
   </div>
 </div>

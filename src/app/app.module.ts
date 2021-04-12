@@ -13,6 +13,7 @@ import { ListComponent } from './to-do/list/list.component';
 import { FormComponent } from './to-do/form/form.component';
 import { EditTaskComponent } from './to-do/edit-task/edit-task.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavBarComponent } from './share/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ListComponent,
     FormComponent,
     EditTaskComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

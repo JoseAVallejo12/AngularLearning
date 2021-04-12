@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculadoraComponent implements OnInit {
   display: string;
+  listButtons: Array<string>;
+  regexOperation: RegExp;
+  regexOperator: RegExp;
+  regexNumber: RegExp;
 
   constructor() {
     this.display = '';
+    this.regexOperator = /[ce=]/g;
+    this.regexOperation = /[\*\-\+\/]/g;
+    this.regexNumber = /[1-9]/;
+    this.listButtons = ['1', '2', '3', '4','5','6','7','8','9', '0', '+','-','*', '/', 'ce', '='];
   }
 
   ngOnInit(): void {}
@@ -22,5 +30,20 @@ export class CalculadoraComponent implements OnInit {
     } else {
       this.display += e.target.name;
     }
+  }
+
+  operatorMath(value: string): boolean {
+    if (value.match(this.regexOperator)) return true;
+    return false;
+  }
+
+  operationMath(value: string): boolean {
+    if (value.match(this.regexOperation)) return true;
+    return false;
+  }
+
+  numberMath(valor: string): boolean {
+    if (valor.match(this.regexNumber)) return true;
+    return false;
   }
 }

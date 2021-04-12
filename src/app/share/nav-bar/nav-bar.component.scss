@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import '../../../../node_modules/bulma/bulma.sass';
+
+.logo {
+  width: 70px;
+}
+.navbar-item{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.activa {
+  color: #3273DC;
+  background: white;
+}

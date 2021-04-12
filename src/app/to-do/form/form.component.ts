@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   iconSave = faSave;
 
   @Output() onSubmitData: EventEmitter<Task>;
+
   constructor() {
     this.task = new Task();
     this.onSubmitData = new EventEmitter();
