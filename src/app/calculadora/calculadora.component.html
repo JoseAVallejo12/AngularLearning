@@ -1,6 +1,6 @@
 <div class="calculadora box">
-  <div class="display">
-    <h1>{{ display }}</h1>
+  <div class="box display">
+    <p>{{ display }}</p>
   </div>
   <div class="teclado">
     <button
@@ -8,6 +8,7 @@
       (click)="onClick($event)"
       name="{{ i }}"
       [ngClass]="{
+        button: true,
         tecla: numberMath(i),
         tecla0: i.includes('0'),
         teclaOp: operationMath(i),
